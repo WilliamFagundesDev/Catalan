@@ -124,7 +124,7 @@ onMounted(() => {
         <div class="metric-card metric-binomial">
           <div class="metric-label">2. Coeficiente Binomial O(n)</div>
           <div class="metric-value">
-            {{ binomialResult?.result !== undefined ? binomialResult.result.toString() : '...' }}
+            {{ binomialResult?.result !== undefined && binomialResult?.result !== null ? binomialResult.result.toString() : '...' }}
           </div>
           <div class="metric-time" v-if="binomialResult">
             Tempo de CPU: <span class="time-badge">{{ binomialResult.timeMs.toFixed(3) }} ms</span>
